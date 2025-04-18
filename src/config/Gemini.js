@@ -1,3 +1,4 @@
+
 import {
   GoogleGenerativeAI,
   HarmCategory,
@@ -5,7 +6,7 @@ import {
 } from "@google/generative-ai";
 
 const MODEL_NAME = "gemini-2.0-flash"; // Model name for v1beta version
-const API_KEY = process.env.API_KEY;
+const API_KEY = import.meta.env.VITE_API_KEY; // Replace with your actual API key from the environment variable
 
 async function runChat(prompt) {
   const genAI = new GoogleGenerativeAI(API_KEY);
